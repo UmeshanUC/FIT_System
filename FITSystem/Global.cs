@@ -8,7 +8,7 @@ namespace FITSystem
 {
     public static class Global
     {
-        public static string UserID = null;
+        public static string Empl_id = null;
 
         public static DateTime? LoginTS = null;
 

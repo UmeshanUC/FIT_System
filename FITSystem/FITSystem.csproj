@@ -124,7 +124,6 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Database\database.cs" />
-    <Compile Include="Database\Models.cs" />
     <Compile Include="FinancialManagement_Window.xaml.cs">
       <DependentUpon>FinancialManagement_Window.xaml</DependentUpon>
     </Compile>
@@ -138,6 +137,10 @@
     <Compile Include="Member_Reg.xaml.cs">
       <DependentUpon>Member_Reg.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Models\LOGIN.cs" />
+    <Compile Include="Models\LOGIN_LOG.cs" />
+    <Compile Include="Models\PERMISSIONS.cs" />
+    <Compile Include="Models\WORK_ROLE.cs" />
     <Compile Include="PersonnelManagemet_Window.xaml.cs">
       <DependentUpon>PersonnelManagemet_Window.xaml</DependentUpon>
     </Compile>

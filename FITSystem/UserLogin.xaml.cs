@@ -1,4 +1,5 @@
 ﻿using FITSystem.Database;
+using FITSystem.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace FITSystem
         {
             //NotifyOverlay.Visibility = Visibility.Visible;
             await Task.Delay(250);
-            var ValidationResult = Validate(txtUser.Text, txtPassWd.Password);
+            var ValidationResult = Validate(txtPassWd.Password, txtPassWd.Password);
             if (ValidationResult.Item1)
             {
                 LogUserLogin();
@@ -95,7 +96,7 @@ namespace FITSystem
         {
 
             database LoginQuerry = new database();
-            var Data = LoginQuerry.Login_Set.Where(u => u.UserID == User).FirstOrDefault();
+            var Data = LoginQuerry.LOGIN_SET.Include("WORK_ROLE.PERMISSIONS").Where(u => u.Username == User).FirstOrDefault();
 
             if (Data == null)
             {
@@ -104,10 +105,10 @@ namespace FITSystem
 
                 return (false, -1);
             }
-            else if (User == Data.UserID & PassWd == Data.PassWd)
+            else if (User == Data.Username & PassWd == Data.Passwd)
             {
 
-                return (true, Data.AccessLevel);
+                return (true, Data.WORK_ROLE.PERMISSIONS.Perm_id);
             }
             else
             {
@@ -124,17 +125,17 @@ namespace FITSystem
         public void LogUserLogin()
             {
                 database LoginLogCtx = new database();
-                UserLoginLog Log = new UserLoginLog
+                LOGIN_LOG Log = new LOGIN_LOG()
                 {
-                    UserID = txtUser.Text,
+                    Empl_id = txtUser.Text,
                     LoggedTS = DateTime.Now,
 
                 };
-                Global.UserID = txtUser.Text;
+                Global.Empl_id = txtUser.Text;
                 Global.LoginTS = Log.LoggedTS;
                 Global.IsUserLoggedIn = true;
 
-                LoginLogCtx.LoginLog_Set.Add(Log);
+                LoginLogCtx.LOGIN_LOG_SET.Add(Log);
                 LoginLogCtx.SaveChanges();
 
             }

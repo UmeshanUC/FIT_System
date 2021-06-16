@@ -6,12 +6,19 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FITSystem.FITControls"
              mc:Ignorable="d" d:DesignWidth="1618.691" Height="40" >
-    <Border CornerRadius="0 25 0 25" RenderTransformOrigin="0.5,0.5" Background="#FF515151">
-        <StackPanel Margin="0">
-            <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft" Margin="0" >
-                <Button Content="X"  Margin="8" Height="Auto" Width="50" VerticalAlignment="Center"/>
+    <Border CornerRadius="0 0 0 0" RenderTransformOrigin="0.5,0.5" Background="#FF515151">
+        <Grid Margin="0">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft" Margin="5" >
+                <Button Content="X"  Margin="0" Height="Auto" Width="50" VerticalAlignment="Center" BorderBrush="#FF252222" Foreground="#FF990F0F" FontWeight="Bold" FontSize="18">
+                    <Button.Background>
+                        <RadialGradientBrush>
+                            <GradientStop Color="#FF342E2E" Offset="1"/>
+                            <GradientStop Color="#FF524545"/>
+                        </RadialGradientBrush>
+                    </Button.Background>
+                </Button>
             </StackPanel>
 
-        </StackPanel>
+        </Grid>
     </Border>
 </UserControl>

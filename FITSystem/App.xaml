@@ -13,11 +13,11 @@
 
         <Style TargetType="Button">
             <Setter Property="Height" Value="30"/>
-            <Setter Property="Background" Value="#FF323232"/>
+            <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="#FFB1B1B1"/>
             <Style.Resources>
                 <Style TargetType="{x:Type Border}">
-                    <Setter Property="CornerRadius" Value="25 3 25 3"/>
+                    <Setter Property="CornerRadius" Value="0"/>
                 </Style>
             </Style.Resources>
         </Style>

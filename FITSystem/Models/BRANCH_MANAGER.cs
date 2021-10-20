@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class BRANCH_MANAGER
+    public class BranchManager
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Empl_id { get; set; }
+        public int EmplId { get; set; }
         public string Branch { get; set; }
 
         ////////////////REFERENCES////////////////////

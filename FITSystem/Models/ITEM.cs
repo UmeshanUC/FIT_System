@@ -8,14 +8,14 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class ITEM
+    public class Item
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
         public string Name { get; set; }
         public string Section { get; set; }
-        public string Purchased_date { get; set; }
-        public int Unit_value { get; set; }
+        public string PurchasedDate { get; set; }
+        public int UnitValue { get; set; }
         public int Quantity { get; set; }
 
         ////////////////REFERENCES////////////////////

@@ -17,9 +17,9 @@ namespace FITSystem
     /// <summary>
     /// Interaction logic for FinancialManagement_Window.xaml
     /// </summary>
-    public partial class FinancialManagement_Window : Window
+    public partial class FinancialManagementWindow : Window
     {
-        public FinancialManagement_Window()
+        public FinancialManagementWindow()
         {
             InitializeComponent();
         }

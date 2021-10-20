@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class LOGIN_LOG
+    public class LoginLog
     {
         [Key, Column(Order = 0)]
-        public string Empl_id { get; set; }
+        public string EmplId { get; set; }
         [Key, Column(Order = 1)]
-        public DateTime LoggedTS { get; set; }
-        public DateTime? LogOutTS { get; set; }
+        public DateTime LoggedTs { get; set; }
+        public DateTime? LogOutTs { get; set; }
     }
 }

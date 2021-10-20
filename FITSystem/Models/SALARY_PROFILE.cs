@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class SALARY_PROFILE
+    public class SalaryProfile
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Empl_id { get; set; }
-        public int Base_salary { get; set; }
+        public int EmplId { get; set; }
+        public int BaseSalary { get; set; }
         public int Deduction { get; set; }
         public int Bonus { get; set; }
-        public int Net_salary { get; set; }
+        public int NetSalary { get; set; }
 
         ////////////////REFERENCES////////////////////
     }

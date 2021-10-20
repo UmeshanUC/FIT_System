@@ -17,9 +17,9 @@ namespace FITSystem
     /// <summary>
     /// Interaction logic for InventoryManagement_Window.xaml
     /// </summary>
-    public partial class InventoryManagement_Window : Window
+    public partial class InventoryManagementWindow : Window
     {
-        public InventoryManagement_Window()
+        public InventoryManagementWindow()
         {
             InitializeComponent();
         }

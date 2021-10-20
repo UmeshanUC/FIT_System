@@ -18,11 +18,16 @@ namespace FITSystem.FITControls
     /// <summary>
     /// Interaction logic for FIT_Title_Bar.xaml
     /// </summary>
-    public partial class FIT_Title_Bar : UserControl
+    public partial class FitTitleBar : UserControl
     {
-        public FIT_Title_Bar()
+        public FitTitleBar()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
         }
     }
 }

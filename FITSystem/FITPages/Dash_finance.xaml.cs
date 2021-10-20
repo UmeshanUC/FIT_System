@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem
+namespace FITSystem.FITPages
 {
     /// <summary>
-    /// Interaction logic for PersonnelManagemet_Window.xaml
+    /// Interaction logic for Dash_finance.xaml
     /// </summary>
-    public partial class PersonnelManagemetWindow : Window
+    public partial class Dash_finance : Page
     {
-        public PersonnelManagemetWindow()
+        public Dash_finance()
         {
             InitializeComponent();
         }

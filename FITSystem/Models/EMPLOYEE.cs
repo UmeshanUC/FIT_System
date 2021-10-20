@@ -8,20 +8,23 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class EMPLOYEE
+    public class Employee
     {
-        [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-
-        public int Empl_id { get; set; }
+        [Key]
+        [ForeignKey("WorkRole")]
+        public int EmplId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public string Epf_no { get; set; }
+        public string EpfNo { get; set; }
         public string Gender { get; set; }
-        public string Adress { get; set; }
-        public int Bank_Account { get; set; }
-        public string Joined_Date  { get; set; }
+        public string Address { get; set; }
+        public int BankAccount { get; set; }
+        public string JoinedDate  { get; set; }
         public int Telephone { get; set; }
 
-        ////////////////REFERENCES////////////////////
+        //Navigation Props
+
+        public virtual WorkRole WorkRole { get; set; }
+        public virtual Login Login { get; set; }
     }
 }

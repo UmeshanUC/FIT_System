@@ -17,9 +17,9 @@ namespace FITSystem
     /// <summary>
     /// Interaction logic for Member_Reg.xaml
     /// </summary>
-    public partial class Member_Reg : Window
+    public partial class MemberReg : Window
     {
-        public Member_Reg()
+        public MemberReg()
         {
             InitializeComponent();
         }

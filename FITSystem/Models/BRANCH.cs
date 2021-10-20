@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class BRANCH
+    public class Branch
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Branch_code { get; set; }
+        public int BranchCode { get; set; }
         public string Name { get; set; }
         public string Adress { get; set; }
         public int Telephone { get; set; }

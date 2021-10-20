@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class SECTION
+    public class Section
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public string Section { get; set; }
-        public string Section_manager { get; set; }
+        // public string Section { get; set; }
+        public string SectionManager { get; set; }
 
 
             ////////////////REFERENCES////////////////////

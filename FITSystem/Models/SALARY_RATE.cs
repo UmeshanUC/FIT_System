@@ -9,13 +9,13 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class SALARY_RATE
+    public class SalaryRate
     {
         [Key][DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Role_ID { get; set; }
-        public int Base_salary { get; set; }
-        public int Implemented_date { get; set; }
+        public int RoleId { get; set; }
+        public int BaseSalary { get; set; }
+        public int ImplementedDate { get; set; }
         
 
         ////////////////REFERENCES////////////////////

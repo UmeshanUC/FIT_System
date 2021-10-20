@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class TRAINER
+    public class Trainer
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Empl_id { get; set; }
+        public int EmplId { get; set; }
         public string Specialization { get; set; }
 
 

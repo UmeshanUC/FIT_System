@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class SUPPLIER
+    public class Supplier
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Product_id { get; set; }
+        public int ProductId { get; set; }
         public string Name { get; set; }
         public string Agent { get; set; }
         public int Telephone { get; set; }
         public string Adress { get; set; }
-        public string Date_partnered { get; set; }
+        public string DatePartnered { get; set; }
 
 
 

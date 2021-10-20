@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class PACKAGE
+    public class Package
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 

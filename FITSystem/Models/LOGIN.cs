@@ -8,17 +8,17 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class LOGIN
+    public class Login
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ForeignKey("WORK_ROLE")]
-        public int Empl_id { get; set; }
+        [ForeignKey("Employee")]
+        public int EmplId { get; set; }
         [Required]
-        public string Username{ get; set; } // Make it float later ans match the switch case in login Btn
+        public string Username{ get; set; } // Make it float later and match the switch case in login Btn
         [Required]
         public string Passwd { get; set; }
 
-        //////////////REFERENCES////////////////////
-        public WORK_ROLE WORK_ROLE { get; set; }
+        //Navigation Props
+        public virtual Employee Employee { get; set; }
     }
 }

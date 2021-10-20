@@ -8,14 +8,16 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class PERMISSIONS
+    public class Permissions
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Perm_id { get; set; }
-        public int Role_id { get; set; }
-        public string Perm_Description { get; set; }
+        [ForeignKey("WorkRole")]
+        public int RoleId { get; set; }
+        [Required]
+        public int PermId { get; set; }
+        public string PermDescription { get; set; }
 
-        ////////////////REFERENCES////////////////////
-       //public virtual WORK_ROLE WORK_ROLE{ get; set; }
+        //Navigation Props
+        public virtual WorkRole WorkRole { get; set; }
     }
 }

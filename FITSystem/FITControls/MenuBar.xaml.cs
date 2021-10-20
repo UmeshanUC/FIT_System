@@ -10,18 +10,24 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem
+namespace FITSystem.FITControls
 {
     /// <summary>
-    /// Interaction logic for PersonnelManagemet_Window.xaml
+    /// Interaction logic for MenuBar.xaml
     /// </summary>
-    public partial class PersonnelManagemetWindow : Window
+    public partial class MenuBar : UserControl
     {
-        public PersonnelManagemetWindow()
+        public MenuBar()
         {
             InitializeComponent();
+        }
+
+        private void miLogout_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

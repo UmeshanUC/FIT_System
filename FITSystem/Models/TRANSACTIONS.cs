@@ -8,15 +8,15 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class TRANSACTIONS
+    public class Transactions
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 
-        public int Transaction_id { get; set; }
-        public string Pay_method { get; set; }
+        public int TransactionId { get; set; }
+        public string PayMethod { get; set; }
         public int Value { get; set; }
         public string Date {get; set; }
-        public string time { get; set; }
+        public string Time { get; set; }
         public string Payee { get; set; }
         public string Type { get; set; }
         public string User { get; set; }

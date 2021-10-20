@@ -2,6 +2,7 @@
 using FITSystem.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,7 +29,6 @@ namespace FITSystem
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            
         }
 
         private void LblLogin_MouseDown(object sender, MouseButtonEventArgs e)
@@ -38,106 +38,102 @@ namespace FITSystem
 
         private async void btnLogin_Click_1(object sender, RoutedEventArgs e)
         {
-            //NotifyOverlay.Visibility = Visibility.Visible;
-            await Task.Delay(250);
-            var ValidationResult = Validate(txtPassWd.Password, txtPassWd.Password);
-            if (ValidationResult.Item1)
-            {
-                LogUserLogin();
-
-
-
-
-                switch (ValidationResult.Item2)
+                var validationResult = Validate(txtUser.Text, txtPassWd.Password);
+                if (validationResult.Item1)
                 {
-                    case 0:
-                        Navigate<DashB>();
-                        break;
+                    LogUserLogin();
 
-                    default:
-                        MessageBox.Show("Error in Access Level");
-                        //NotifyOverlay.Visibility = Visibility.Hidden;
-                        return;
 
+                    switch (validationResult.Item2)
+                    {
+                        case 0:
+                            Navigate<DashB>();
+                            break;
+
+                        default:
+                            MessageBox.Show("Error in Access Level");
+                            //NotifyOverlay.Visibility = Visibility.Hidden;
+                            return;
+                    }
+
+                    this.Close();
                 }
-
-                this.Close();
-            }
+     
             ///Slowing down happens at the click to establish the connection. For Better speed the connction establishment could be done in the form load. Hence the lag become invisible to user
-
-
-
-
         }
 
-        
-        //////////////////////////////////////------------------////////////////////////////////////////////
-        //////////////////////////////////////------METHOD------////////////////////////////////////////////
-        //////////////////////////////////////------------------////////////////////////////////////////////
-
-
 
         //////////////////////////////////////------------------////////////////////////////////////////////
-        
+        //////////////////////////////////////------METHODS------////////////////////////////////////////////
+        //////////////////////////////////////------------------////////////////////////////////////////////
 
-        public void Navigate<Win>() where Win: Window, new()
+
+        //////////////////////////////////////------------------////////////////////////////////////////////
+
+
+        public void Navigate<TWin>() where TWin : Window, new()
         {
-            Win Dash_B = new Win();
-            Dash_B.Show();
+            TWin dashB = new TWin();
+            dashB.Show();
             this.Close();
         }
 
-        
+
         //////////////////////////////////////------------------////////////////////////////////////////////
-        
 
 
-        public (bool, int) Validate(string User, string PassWd)
+        public (bool, int) Validate(string user, string passWd)
         {
-
-            database LoginQuerry = new database();
-            var Data = LoginQuerry.LOGIN_SET.Include("WORK_ROLE.PERMISSIONS").Where(u => u.Username == User).FirstOrDefault();
-
-            if (Data == null)
+            //Instantiating the DbConctext
+            using (FitDb loginQuery = new FitDb())
             {
-                MessageBox.Show("UsedID Not Found");
-                //NotifyOverlay.Visibility = Visibility.Hidden;
+                var Tdata = loginQuery.EmployeeSet.Include(e => e.Login).Include(e => e.WorkRole.Permissions)
+                    .FirstOrDefault(e => e.Login.Username == user && e.Login.Passwd == passWd);
 
-                return (false, -1);
-            }
-            else if (User == Data.Username & PassWd == Data.Passwd)
-            {
 
-                return (true, Data.WORK_ROLE.PERMISSIONS.Perm_id);
-            }
-            else
-            {
-                MessageBox.Show("Invalid Password");
-                //NotifyOverlay.Visibility = Visibility.Hidden;
+                if (Tdata == null)
+                {
+                    MessageBox.Show("Invalid Username or Password");
+                    return (false, -1);
+                }
 
-                return (false, -1);
+                //Actually unneccessary since checked at the query
+                else if (user == Tdata.Login.Username & passWd == Tdata.Login.Passwd)
+                {
+                    return (true, Tdata.WorkRole.Permissions.PermId);
+                }
+                else
+                {
+                    MessageBox.Show("Invalid Username or Password");
+                    //NotifyOverlay.Visibility = Visibility.Hidden;
+
+                    return (false, -1);
+                }
             }
         }
 
         //////////////////////////////////////------------------////////////////////////////////////////////
-        
+
 
         public void LogUserLogin()
+        {
+            FitDb loginLogCtx = new FitDb();
+            LoginLog log = new LoginLog()
             {
-                database LoginLogCtx = new database();
-                LOGIN_LOG Log = new LOGIN_LOG()
-                {
-                    Empl_id = txtUser.Text,
-                    LoggedTS = DateTime.Now,
+                EmplId = txtUser.Text,
+                LoggedTs = DateTime.Now,
+            };
+            Global.EmplId = txtUser.Text;
+            Global.LoginTs = log.LoggedTs;
+            Global.IsUserLoggedIn = true;
 
-                };
-                Global.Empl_id = txtUser.Text;
-                Global.LoginTS = Log.LoggedTS;
-                Global.IsUserLoggedIn = true;
+            loginLogCtx.LoginLogSet.Add(log);
+            loginLogCtx.SaveChanges();
+        }
 
-                LoginLogCtx.LOGIN_LOG_SET.Add(Log);
-                LoginLogCtx.SaveChanges();
-
-            }
+        private void BtnExit_OnClick(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
     }
 }

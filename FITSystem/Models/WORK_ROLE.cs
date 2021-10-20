@@ -2,29 +2,29 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Org.BouncyCastle.Utilities.IO.Pem;
 
 namespace FITSystem.Models
 {
-    public class WORK_ROLE
+    public class WorkRole
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ForeignKey("PERMISSIONS")]
-        public int Empl_id { get; set; }
-        [Required] 
-        public int Role_id { get; set; }
+        public int EmplId { get; set; }
         [Required]
-        public string  Role_name { get; set; }
+        public int RoleId { get; set; }
+        [Required]
+        public string  RoleName { get; set; }
         public string Description { get; set; }
 
-        ////////////////REFERENCES////////////////////
+        //Navigation Props
+        public virtual Permissions Permissions { get; set; }
+        public virtual Employee Employee { get; set; }
+    
 
-        public  PERMISSIONS PERMISSIONS { get; set; }
-        public  LOGIN LOGIN{ get; set; }
-        //public ICollection<PERMISSIONS> PERMISSIONS { get; set; }
-        //public ICollection<LOGIN> LOGIN { get; set; }
 
 
     }

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class TRAINING_PROFILE
+    public class TrainingProfile
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
 

@@ -28,14 +28,16 @@ namespace FITSystem
         }
 
         private NavBtns ClickedNavBtn;
+
         #endregion
 
         public DashB()
         {
             InitializeComponent();
+
+            this.DataContext = new DashB_DBCtx();
             ClickedNavBtn = NavBtns.home;
         }
-
         #region Event Handlers
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
         {

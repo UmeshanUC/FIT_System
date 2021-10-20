@@ -44,7 +44,7 @@
                     <StackPanel.Resources>
                         
                         <Style x:Key="NavBtnStyle" TargetType="Button" BasedOn="{StaticResource DarkBtnInh}" >
-                            <Setter Property="Margin" Value="0 0 0 1"/>
+                            <Setter Property="Margin" Value="10 10 10 0"/>
                             <Style.Resources>
                                 <Style TargetType="{x:Type Border}">
                                     <Setter Property="CornerRadius" Value="0"/>
@@ -55,8 +55,9 @@
                         <Style TargetType="Button" BasedOn="{StaticResource NavBtnStyle}"/>
                         
                         <!--Common Button Clicked Style-->
-                        <Style x:Key="NavButtonClicked" TargetType="Button" BasedOn="{StaticResource DarkBtnInh}">
+                        <Style x:Key="NavButtonClicked" TargetType="Button" BasedOn="{StaticResource NavBtnStyle}">
                             <Setter Property="Background" Value="#FF635C5C"/>
+                            <Setter Property="Margin" Value="6 10 6 0"/>
                         </Style>
                     </StackPanel.Resources>
                     <Button Content="HOME" Height="50" Click="SetNavBtnClickedStyle"/>
@@ -68,8 +69,8 @@
                 <!--Status Bar-->
                 <Grid DockPanel.Dock="Bottom"  Height="40px" Background="#FF1B1B20">
                     <StackPanel Orientation="Horizontal" VerticalAlignment="Center" FlowDirection="RightToLeft" Margin="0 0 10 0">
-                        <TextBlock Style="{StaticResource TBlockCommon}" Text="Time" Margin="50,0,0,0"/>
-                        <TextBlock Style="{StaticResource TBlockCommon}" Text="Date" Margin="50,0"/>
+                        <TextBlock Style="{StaticResource TBlockCommon}" FlowDirection="LeftToRight" Text="{Binding TimeNow}" Margin="50,0,0,0"/>
+                        <TextBlock Style="{StaticResource TBlockCommon}" FlowDirection="LeftToRight" Text="{Binding TodayDate}" Margin="50,0"/>
                     </StackPanel>
 
                 </Grid>

@@ -134,6 +134,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Classes\DashB_DBCtx.cs" />
     <Compile Include="Database\database.cs" />
     <Compile Include="FinancialManagement_Window.xaml.cs">
       <DependentUpon>FinancialManagement_Window.xaml</DependentUpon>

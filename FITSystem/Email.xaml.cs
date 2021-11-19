@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FITSystem
 {
     /// <summary>
-    /// Interaction logic for InventoryManagement_Window.xaml
+    /// Interaction logic for Email.xaml
     /// </summary>
-    public partial class InventoryManagementWindow : Window
+    public partial class Email : Window
     {
-        public InventoryManagementWindow()
+        public Email()
         {
             InitializeComponent();
         }

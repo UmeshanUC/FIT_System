@@ -14,7 +14,7 @@ namespace FITSystem.Models
 
         public string Code { get; set; } // datatype
         public string Name { get; set; }
-        public int Pricing { get; set; }
+        public int Value { get; set; }
         public string Benefits { get; set; }
         public string Duration { get; set; }
         public string Details { get; set; }

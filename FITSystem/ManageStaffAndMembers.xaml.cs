@@ -15,13 +15,18 @@ using System.Windows.Shapes;
 namespace FITSystem
 {
     /// <summary>
-    /// Interaction logic for Member_Reg.xaml
+    /// Interaction logic for ManageStaffAndMembers.xaml
     /// </summary>
-    public partial class MemberReg : Window
+    public partial class ManageStaffAndMembers : Window
     {
-        public MemberReg()
+        public ManageStaffAndMembers()
         {
             InitializeComponent();
+        }
+
+        private void FitTitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.DragMove();
         }
     }
 }

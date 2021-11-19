@@ -135,9 +135,14 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Classes\DashB_DBCtx.cs" />
+    <Compile Include="Classes\Models\DetailCard.cs" />
+    <Compile Include="Classes\Models\Interfaces\IDetailCard.cs" />
+    <Compile Include="Classes\Models\Interfaces\IPerson.cs" />
+    <Compile Include="Classes\Models\Profile.cs" />
+    <Compile Include="Classes\Models\StaffAndMembersContext.cs" />
     <Compile Include="Database\database.cs" />
-    <Compile Include="FinancialManagement_Window.xaml.cs">
-      <DependentUpon>FinancialManagement_Window.xaml</DependentUpon>
+    <Compile Include="Email.xaml.cs">
+      <DependentUpon>Email.xaml</DependentUpon>
     </Compile>
     <Compile Include="FITControls\DetailCard.xaml.cs">
       <DependentUpon>DetailCard.xaml</DependentUpon>
@@ -159,11 +164,8 @@
       <DependentUpon>Dash_Staff.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Global.cs" />
-    <Compile Include="InventoryManagement_Window.xaml.cs">
-      <DependentUpon>InventoryManagement_Window.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Member_Reg.xaml.cs">
-      <DependentUpon>Member_Reg.xaml</DependentUpon>
+    <Compile Include="ManageStaffAndMembers.xaml.cs">
+      <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\BRANCH.cs" />
     <Compile Include="Models\BRANCH_MANAGER.cs" />
@@ -184,8 +186,11 @@
     <Compile Include="Models\TRAINING_PROFILE.cs" />
     <Compile Include="Models\TRANSACTIONS.cs" />
     <Compile Include="Models\WORK_ROLE.cs" />
-    <Compile Include="PersonnelManagemet_Window.xaml.cs">
-      <DependentUpon>PersonnelManagemet_Window.xaml</DependentUpon>
+    <Compile Include="Profile.xaml.cs">
+      <DependentUpon>Profile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Register_Edit.xaml.cs">
+      <DependentUpon>Register_Edit.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
@@ -202,7 +207,7 @@
       <DependentUpon>DashB.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="FinancialManagement_Window.xaml">
+    <Page Include="Email.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -230,15 +235,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="InventoryManagement_Window.xaml">
+    <Page Include="ManageStaffAndMembers.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Member_Reg.xaml">
+    <Page Include="Profile.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="PersonnelManagemet_Window.xaml">
+    <Page Include="Register_Edit.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

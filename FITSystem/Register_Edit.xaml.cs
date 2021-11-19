@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace FITSystem
 {
     /// <summary>
-    /// Interaction logic for PersonnelManagemet_Window.xaml
+    /// Interaction logic for Register_Edit.xaml
     /// </summary>
-    public partial class PersonnelManagemetWindow : Window
+    public partial class Register_Edit : Window
     {
-        public PersonnelManagemetWindow()
+        public Register_Edit()
         {
             InitializeComponent();
         }

@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:FITSystem"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="Profile.xaml">
+             StartupUri="DashB.xaml">
 
     <Application.Resources>
         <ResourceDictionary>

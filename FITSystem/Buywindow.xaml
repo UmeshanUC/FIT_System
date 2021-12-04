@@ -5,10 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FITSystem"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Payment" Height="450" Width="800">
     <Grid Background="#282930">
         <Grid Margin="0,0,-0.4,301">
-            <TextBlock HorizontalAlignment="Left" Margin="339,10,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            
            
             <Grid Margin="207,45,207,10">
                 <Grid.Background>

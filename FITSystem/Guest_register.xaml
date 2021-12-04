@@ -5,21 +5,64 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FITSystem"
         mc:Ignorable="d"
+        WindowStyle="None"
         Title="Guest_register" Height="450" Width="800">
-    <Grid Background="#FF1A1B20">
+    <Grid Background="#FF1A1B20" Height="450" Width="800">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="48"/>
+            <RowDefinition Height="58*"/>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition  Width="50*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="220*"/>
+            <ColumnDefinition Width="50*"/>
+            <ColumnDefinition Width="100*"/>
+            <ColumnDefinition Width="220*"/>
+            <ColumnDefinition Width="40"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Label Foreground="#FFB1B1B1" Content="Registration Form" HorizontalAlignment="Left" VerticalAlignment="Top" Width="293"  Height="40" Grid.ColumnSpan="3" FontSize="18" FontWeight="Bold" Margin="19,0,0,0"/>
+        <Button Foreground="#FFB1B1B1" Content="Register" Grid.Column="2" HorizontalAlignment="Left" Margin="203.4,10.4,0,0" VerticalAlignment="Top" Width="97" Background="#FF323232" Height="41" Grid.Row="8" Grid.ColumnSpan="3"/>
+        <Label  Foreground="#FFB1B1B1" Content="e-mail"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label  Foreground="#FFB1B1B1" Content="Gender"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content="NIC No"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Foreground="#FFB1B1B1" Content="Tele No"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Foreground="#FFB1B1B1" Content="Address"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Foreground="#FFB1B1B1" Content="Confirm Password"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="4" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content="Height"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="5" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content=""  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Foreground="#FFB1B1B1" Content="Weight"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="6" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content=""  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <Label Foreground="#FFB1B1B1" Content="upload photo"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="7" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content="Password"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content="User Name"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
+        <Label Foreground="#FFB1B1B1" Content="Name"   Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="2" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="3" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="4" TextWrapping="Wrap" Text="k" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
+        <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
 
 
-        <Button x:Name="seller_register" Content="Register" HorizontalAlignment="Left" Margin="340,347,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
-        <Grid HorizontalAlignment="Left" Height="222" Margin="0,120,-0.4,0" VerticalAlignment="Top" Width="794" Background="#FF323232">
-            <ListBox  Background="#FF323232" Margin="0,10,0,40" >
-                <ListBoxItem  Padding="10" Foreground="#FFB1B1B1">• You can select best fit plan for you</ListBoxItem>
-                <ListBoxItem Padding="10" Foreground="#FFB1B1B1">•Don't waste your time just fill your details your own</ListBoxItem>
-                <ListBoxItem Padding="10" Foreground="#FFB1B1B1">•No mistakes you can register your own</ListBoxItem>
-                <ListBoxItem Padding="10"  Foreground="#FFB1B1B1">• Register here with one click</ListBoxItem>
-            </ListBox>
-        </Grid>
 
-        <Label Content="Resiter Here" HorizontalAlignment="Left" Height="47" Margin="0,25,0,0" VerticalAlignment="Top" Width="784" Background="#FF323232" Foreground="#FFB1B1B1" FontSize="22"/>
 
     </Grid>
 </Window>

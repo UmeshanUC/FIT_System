@@ -10,24 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem.FITPages
+namespace FITSystem
 {
     /// <summary>
-    /// Interaction logic for Dash_Staff.xaml
+    /// Interaction logic for member_registrationform.xaml
     /// </summary>
-    public partial class Dash_Staff : Page
+    public partial class member_registrationform : Window
     {
-        public Dash_Staff()
+        public member_registrationform()
         {
             InitializeComponent();
-        }
-
-        private void DetailCard_Loaded(object sender, RoutedEventArgs e)
-        {
-
         }
     }
 }

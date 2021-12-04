@@ -24,5 +24,45 @@ namespace FITSystem.FITPages
         {
             InitializeComponent();
         }
+
+        private void btn_buy_Click(object sender, RoutedEventArgs e)
+        {
+            Buywindow win = new Buywindow();
+            win.Show(); 
+
+
+
+        }
+
+        private void buy_2week_Click(object sender, RoutedEventArgs e)
+        {
+            Buywindow win = new Buywindow();
+            win.Show();
+        }
+
+        private void buy_1month_Click(object sender, RoutedEventArgs e)
+        {
+            Buywindow win = new Buywindow();
+            win.Show();
+        }
+
+        private void but_6month_Click(object sender, RoutedEventArgs e)
+        {
+            Buywindow win = new Buywindow();
+            win.Show();
+        }
+
+
+        private void buy_basic_Click(object sender, RoutedEventArgs e)
+        {
+            Buywindow win = new Buywindow();
+            win.Show();
+        }
+
+        private void buy_plus_Click(object sender, RoutedEventArgs e)
+        {
+            Buywindow win = new Buywindow();
+            win.Show();
+        }
     }
 }

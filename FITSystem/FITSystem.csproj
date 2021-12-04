@@ -134,6 +134,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Buywindow.xaml.cs">
+      <DependentUpon>Buywindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DashB_DBCtx.cs" />
     <Compile Include="Classes\Models\DetailCard.cs" />
     <Compile Include="Classes\Models\Interfaces\IDetailCard.cs" />
@@ -164,8 +167,17 @@
       <DependentUpon>Dash_Staff.xaml</DependentUpon>
     </Compile>
     <Compile Include="Classes\Global.cs" />
+    <Compile Include="front_page.xaml.cs">
+      <DependentUpon>front_page.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Guest_register.xaml.cs">
+      <DependentUpon>Guest_register.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ManageStaffAndMembers.xaml.cs">
       <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="member_registrationform.xaml.cs">
+      <DependentUpon>member_registrationform.xaml</DependentUpon>
     </Compile>
     <Compile Include="Models\BRANCH.cs" />
     <Compile Include="Models\BRANCH_MANAGER.cs" />
@@ -195,6 +207,10 @@
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
+    <Page Include="Buywindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DashB.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -235,7 +251,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="front_page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Guest_register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ManageStaffAndMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="member_registrationform.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -288,7 +316,12 @@
     <Resource Include="imgs\avatar_dark.png" />
     <Resource Include="imgs\avatar_light.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Resource Include="Phoebe-tonkin-680x425.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="payment logos.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

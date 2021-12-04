@@ -10,22 +10,27 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem.FITPages
+namespace FITSystem
 {
     /// <summary>
-    /// Interaction logic for Dash_Staff.xaml
+    /// Interaction logic for front_page.xaml
     /// </summary>
-    public partial class Dash_Staff : Page
+    public partial class front_page : Window
     {
-        public Dash_Staff()
+        public front_page()
         {
             InitializeComponent();
         }
 
-        private void DetailCard_Loaded(object sender, RoutedEventArgs e)
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Guest_register win = new Guest_register();
+            win.Show();
+        }
+
+        private void FitTitleBar_Loaded(object sender, RoutedEventArgs e)
         {
 
         }

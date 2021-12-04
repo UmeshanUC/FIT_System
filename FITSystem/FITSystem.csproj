@@ -318,9 +318,6 @@
     <Resource Include="imgs\avatar_light.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Phoebe-tonkin-680x425.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="payment logos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

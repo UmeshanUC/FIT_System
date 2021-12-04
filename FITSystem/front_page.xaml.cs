@@ -34,5 +34,11 @@ namespace FITSystem
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            UserLogin win = new UserLogin();
+            win.Show();
+        }
     }
 }

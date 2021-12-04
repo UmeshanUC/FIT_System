@@ -12,6 +12,6 @@ namespace FITSystem.Classes.Models
         string Avatar { get; set; }
         int TotalEmployed { get; set; }
         int TodayOnWork { get; set; }
-        int Other { get; set; }
+        int TotalOther { get; set; }
     }
 }

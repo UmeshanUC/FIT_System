@@ -10,21 +10,20 @@ namespace FITSystem.Models
 {
     public class Employee
     {
-        [Key]
-        [ForeignKey("WorkRole")]
-        public int EmplId { get; set; }
-        public string Name { get; set; }
-        public string Email { get; set; }
+        [Key][ForeignKey("Person")]
+        public string NIC { get; set; }
         public string EpfNo { get; set; }
-        public string Gender { get; set; }
-        public string Address { get; set; }
         public int BankAccount { get; set; }
-        public string JoinedDate  { get; set; }
-        public int Telephone { get; set; }
+        public string OtherFacts { get; set; } //Qualifications or Describe Employee
+        //Salary
+        public int BaseSalary { get; set; }
+        public int Bonus { get; set; }
+        public int Deduction { get; set; }
+        public int NetSalary { get; set; }
 
-        //Navigation Props
 
-        public virtual WorkRole WorkRole { get; set; }
-        public virtual Login Login { get; set; }
+        #region NavigationProps
+        public Person Person { get; set; }
+        #endregion
     }
 }

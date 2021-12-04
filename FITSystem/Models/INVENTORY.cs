@@ -8,16 +8,16 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class Permissions
+    public class Inventory
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ForeignKey("WorkRole")]
-        public int RoleId { get; set; }
-        [Required]
-        public int PermId { get; set; }
-        public string PermDescription { get; set; }
+        public string ItemCode{ get; set; }
+        public string Name { get; set; }
+        public string PurchasedDate { get; set; }
+        public int UnitValue { get; set; }
+        public int Quantity { get; set; }
 
-        //Navigation Props
-        public virtual WorkRole WorkRole { get; set; }
+        ////////////////REFERENCES////////////////////
+
     }
 }

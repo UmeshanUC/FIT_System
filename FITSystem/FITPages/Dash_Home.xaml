@@ -6,9 +6,8 @@
       xmlns:local="clr-namespace:FITSystem.FITPages"
       xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
 
-      mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="Dash_Home" Width="1296" Height="784">
+      mc:Ignorable="d"
+      Title="Dash_Home" Width="1670" Height="930">
 
 
     <Grid>
@@ -33,7 +32,7 @@
                         <RowDefinition Height="Auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    
+
                     <!--Row 1-->
                     <DockPanel Grid.Row="0">
                         <Button x:Name="btnShrinkRecentTrans" Content="--" DockPanel.Dock="Right" Width="25" Height="25" Margin="3"/>
@@ -43,13 +42,13 @@
                     <DataGrid Grid.Row="1" Margin="25" />
 
                 </Grid>
-                
+
                 <Grid Grid.Row="2" Margin="25">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition/>
                     </Grid.RowDefinitions>
-                    
+
                     <!--Row 1-->
                     <DockPanel Grid.Row="0">
                         <Button x:Name="btnShrinkMemberReceivables" Content="--" DockPanel.Dock="Right" Width="25" Height="25" Margin="3"/>

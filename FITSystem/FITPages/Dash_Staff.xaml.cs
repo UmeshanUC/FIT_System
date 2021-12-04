@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FITSystem.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,34 @@ namespace FITSystem.FITPages
         public Dash_Staff()
         {
             InitializeComponent();
+            cardMed.DataContext = new DetailCard()
+            {
+                CardName = "Medical Officers",
+                TotalEmployed = 10,
+                TodayOnWork = 5,
+                TotalOther = 3
+            };
+            cardMembers.DataContext = new DetailCard()
+            {
+                CardName = "Members",
+                TotalEmployed = 100,
+                TodayOnWork = 50,
+                TotalOther = 3
+            };
+            cardTrainers.DataContext = new DetailCard()
+            {
+                CardName = "Trainers",
+                TotalEmployed = 35,
+                TodayOnWork = 20,
+                TotalOther = 2
+            };
+            cardOther.DataContext = new DetailCard()
+            {
+                CardName = "Other Staff",
+                TotalEmployed = 20,
+                TodayOnWork = 16,
+                TotalOther = 1
+            };
         }
     }
 }

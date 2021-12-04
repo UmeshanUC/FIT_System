@@ -35,7 +35,7 @@ namespace FITSystem
         {
             InitializeComponent();
 
-            this.DataContext = new DashB_DBCtx();
+            this.DataContext = new DashB_DataCtx();
             ClickedNavBtn = NavBtns.home;
         }
         #region Event Handlers

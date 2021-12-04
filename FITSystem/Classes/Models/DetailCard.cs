@@ -8,6 +8,6 @@ namespace FITSystem.Classes
         public string Avatar { get; set; }
         public int TotalEmployed { get; set; }
         public int TodayOnWork { get; set; }
-        public int Other { get; set; }
+        public int TotalOther { get; set; }
     }
 }

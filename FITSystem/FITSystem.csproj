@@ -134,6 +134,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddPerson.xaml.cs">
+      <DependentUpon>AddPerson.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Classes\DashB_DBCtx.cs" />
     <Compile Include="Classes\Models\DetailCard.cs" />
     <Compile Include="Classes\Models\Interfaces\IDetailCard.cs" />
@@ -167,23 +170,18 @@
     <Compile Include="ManageStaffAndMembers.xaml.cs">
       <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Models\BRANCH.cs" />
-    <Compile Include="Models\BRANCH_MANAGER.cs" />
+    <Compile Include="Models\BRANCHES.cs" />
     <Compile Include="Models\EMPLOYEE.cs" />
-    <Compile Include="Models\ITEM.cs" />
+    <Compile Include="Models\INVENTORY.cs" />
     <Compile Include="Models\LOGIN.cs" />
     <Compile Include="Models\LOGIN_LOG.cs" />
-    <Compile Include="Models\MEDICAL_OFFICER.cs" />
     <Compile Include="Models\MEMBER.cs" />
     <Compile Include="Models\PACKAGE.cs" />
-    <Compile Include="Models\PERMISSIONS.cs" />
-    <Compile Include="Models\PRODUCT.cs" />
-    <Compile Include="Models\SALARY_PROFILE.cs" />
-    <Compile Include="Models\SALARY_RATE.cs" />
+    <Compile Include="Models\PERSON.cs" />
+    <Compile Include="Models\SELLING_PRODUCT.cs" />
     <Compile Include="Models\SECTION.cs" />
     <Compile Include="Models\SUPPLIER.cs" />
-    <Compile Include="Models\TRAINER.cs" />
-    <Compile Include="Models\TRAINING_PROFILE.cs" />
+    <Compile Include="Models\TRAINING_PLAN.cs" />
     <Compile Include="Models\TRANSACTIONS.cs" />
     <Compile Include="Models\WORK_ROLE.cs" />
     <Compile Include="Profile.xaml.cs">
@@ -195,6 +193,11 @@
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ViewModels\Person_VM.cs" />
+    <Page Include="AddPerson.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DashB.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

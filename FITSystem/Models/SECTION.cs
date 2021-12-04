@@ -11,11 +11,12 @@ namespace FITSystem.Models
     public class Section
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        // public string Section { get; set; }
+        public string SectionCode { get; set; }
+        public string SectionName { get; set; }
+        public string Description { get; set; }
         public string SectionManager { get; set; }
 
 
-            ////////////////REFERENCES////////////////////
         
     }
 }

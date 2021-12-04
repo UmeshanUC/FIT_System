@@ -55,7 +55,17 @@
 
             </Style>
 
-            <!--Common Button Clicked Style-->
+            <!--Boxed Button-->
+            <Style x:Key="BoxBtn" TargetType="Button" BasedOn="{StaticResource DarkBtnInh}" >
+                <Setter Property="Margin" Value="10 10 10 0"/>
+                <Style.Resources>
+                    <Style TargetType="{x:Type Border}">
+                        <Setter Property="CornerRadius" Value="0"/>
+                    </Style>
+                </Style.Resources>
+            </Style>
+            
+            <!--Button Clicked Style-->
             <Style x:Key="DarkButtonClicked" TargetType="Button" BasedOn="{StaticResource DarkBtnInh}">
                 <Setter Property="Background" Value="#FF635C5C"/>
             </Style>
@@ -82,6 +92,18 @@
             <Style x:Key="H2_stackVertical" TargetType="TextBlock">
                 <Setter Property="Margin" Value="0 0 0 20"/>
                 <Setter Property="Foreground" Value="#FFB1B1B1"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+            </Style>
+
+            <!--Heading 2 Vertically Stacking TextBox Style-->
+            <Style x:Key="InputH2_stackVertical" TargetType="TextBox">
+                <Setter Property="Margin" Value="0 0 0 20"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Foreground" Value="#FFD3C7C7"/>
+                <Setter Property="Background" Value="#3FB1B1B1"/>
+                <Setter Property="BorderBrush" Value="#FF636363"/>
                 <Setter Property="FontSize" Value="12"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontFamily" Value="Arial"/>

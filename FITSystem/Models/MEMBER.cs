@@ -10,16 +10,14 @@ namespace FITSystem.Models
 {
     public class Member
     {
-        [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-
-        public int MemberId { get; set; } 
-        public string Name { get; set; }
-        public int Telephone { get; set; }
-        public string Gender { get; set; }
-        public string Adress { get; set; }
-        public string Pic { get; set; } //datatype
+        [Key][ForeignKey("Person")]
+        public string NIC { get; set; }
+        public float Weight { get; set; }
+        public float Height { get; set; }
         public string Package { set; get; }
 
-        ////////////////REFERENCES////////////////////
+        #region NavigationProps
+        public Person Person { get; set; }
+        #endregion
     }
 }

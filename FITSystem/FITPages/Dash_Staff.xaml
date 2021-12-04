@@ -26,10 +26,10 @@
                 <RowDefinition Height="1*"/>
                 <RowDefinition Height="1*"/>
             </Grid.RowDefinitions>
-            <Controls:DetailCard Grid.Row="0" Grid.Column="0" />
-            <Controls:DetailCard Grid.Row="0" Grid.Column="1" />
-            <Controls:DetailCard Grid.Row="1" Grid.Column="0" />
-            <Controls:DetailCard Grid.Row="1" Grid.Column="1" />
+            <Controls:DetailCard x:Name="cardMed" Grid.Row="0" Grid.Column="0" />
+            <Controls:DetailCard x:Name="cardTrainers" Grid.Row="0" Grid.Column="1" />
+            <Controls:DetailCard x:Name="cardMembers" Grid.Row="1" Grid.Column="0" />
+            <Controls:DetailCard x:Name="cardOther" Grid.Row="1" Grid.Column="1" />
         </Grid>
     </Grid>
 </Page>

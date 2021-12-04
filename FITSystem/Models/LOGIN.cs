@@ -11,14 +11,18 @@ namespace FITSystem.Models
     public class Login
     {
         [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [ForeignKey("Employee")]
-        public int EmplId { get; set; }
+        [ForeignKey("Person")]
+        public string EmplId { get; set; }
         [Required]
-        public string Username{ get; set; } // Make it float later and match the switch case in login Btn
+        public string Username{ get; set; } 
         [Required]
         public string Passwd { get; set; }
+        [Required][ForeignKey("WorkRole")]
+        public int PermissionLevel { get; set; }
 
-        //Navigation Props
-        public virtual Employee Employee { get; set; }
+        #region NavigationProps
+        public virtual Person Person{ get; set; }
+        public virtual WorkRole WorkRole{ get; set; }
+        #endregion
     }
 }

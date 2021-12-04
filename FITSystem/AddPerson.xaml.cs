@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace FITSystem.FITControls
+namespace FITSystem
 {
     /// <summary>
-    /// Interaction logic for DetailCard.xaml
+    /// Interaction logic for AddPerson.xaml
     /// </summary>
-    public partial class DetailCard : UserControl
+    public partial class AddPerson : Window
     {
-        public DetailCard()
+        public AddPerson()
         {
             InitializeComponent();
-
         }
     }
 }

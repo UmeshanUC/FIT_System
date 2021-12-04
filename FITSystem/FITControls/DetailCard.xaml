@@ -19,7 +19,7 @@
             </Grid.RowDefinitions>
 
             <DockPanel Grid.Row="0" LastChildFill="False" >
-                <TextBlock DockPanel.Dock="Left" Text="Medical Officers" FontSize="24" Style="{StaticResource H1}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
+                <TextBlock DockPanel.Dock="Left" Text="{Binding Path=CardName}" FontSize="24" Style="{StaticResource H1}" HorizontalAlignment="Left" TextWrapping="Wrap" VerticalAlignment="Top"/>
                 <Image DockPanel.Dock="Right" Source="/imgs/avatar_dark.png" Width="auto"/>
             </DockPanel>
 
@@ -44,9 +44,9 @@
                 <TextBlock Text="Today on Work" Grid.Column="0" Grid.Row="1"/>
                 <TextBlock Text="Other/Pending" Grid.Column="0" Grid.Row="2"/>
 
-                <TextBlock Text="0" Grid.Column="1" Grid.Row="0"/>
-                <TextBlock Text="0" Grid.Column="1" Grid.Row="1"/>
-                <TextBlock Text="0" Grid.Column="1" Grid.Row="2"/>
+                <TextBlock Text="{Binding Path=TotalEmployed}" Grid.Column="1" Grid.Row="0"/>
+                <TextBlock Text="{Binding Path=TodayOnWork}" Grid.Column="1" Grid.Row="1"/>
+                <TextBlock Text="{Binding Path=TotalOther}" Grid.Column="1" Grid.Row="2"/>
 
             </Grid>
 

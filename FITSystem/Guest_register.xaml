@@ -58,8 +58,8 @@
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="5" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
         <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,0.4,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White"/>
         <TextBlock Grid.Column="2" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="6" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
-        <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,47.4,0,0" Grid.Row="6" TextWrapping="Wrap" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
         <TextBlock Grid.Column="5" HorizontalAlignment="Left" Margin="18.4,49,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="208" Height="38" Foreground="#FFCE9B9B" Background="White" Grid.RowSpan="2"/>
+        <Button Content="Browse" Grid.Column="5" HorizontalAlignment="Left" Margin="151.4,0.4,0,0" Grid.Row="7" VerticalAlignment="Top" Width="75"/>
 
 
 

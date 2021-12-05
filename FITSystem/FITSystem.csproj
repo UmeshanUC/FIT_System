@@ -176,6 +176,9 @@
     <Compile Include="ManageStaffAndMembers.xaml.cs">
       <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Member_payment.xaml.cs">
+      <DependentUpon>Member_payment.xaml</DependentUpon>
+    </Compile>
     <Compile Include="member_registrationform.xaml.cs">
       <DependentUpon>member_registrationform.xaml</DependentUpon>
     </Compile>
@@ -261,6 +264,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageStaffAndMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Member_payment.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

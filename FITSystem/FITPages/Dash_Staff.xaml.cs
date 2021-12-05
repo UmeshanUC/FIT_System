@@ -58,5 +58,10 @@ namespace FITSystem.FITPages
             }
             return detailCardCtx;
         }
+
+        private void DetailCard_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -28,5 +28,11 @@ namespace FITSystem
         {
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            Member_payment win = new Member_payment();
+            win.Show();
+        }
     }
 }

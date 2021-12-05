@@ -31,7 +31,7 @@
             <ColumnDefinition Width="0*"/>
         </Grid.ColumnDefinitions>
         <Label Foreground="#FFB1B1B1" Content="Registration Form" HorizontalAlignment="Left" VerticalAlignment="Top" Width="293"  Height="40" Grid.ColumnSpan="3" FontSize="18" FontWeight="Bold" Margin="19,0,0,0"/>
-        <Button Foreground="#FFB1B1B1" Content="Register" Grid.Column="2" HorizontalAlignment="Left" Margin="203.4,10.4,0,0" VerticalAlignment="Top" Width="97" Background="#FF323232" Height="41" Grid.Row="8" Grid.ColumnSpan="3"/>
+        <Button Foreground="#FFB1B1B1" Content="Register" Grid.Column="2" HorizontalAlignment="Left" Margin="203.4,10.4,0,0" VerticalAlignment="Top" Width="97" Background="#FF323232" Height="41" Grid.Row="8" Grid.ColumnSpan="3" Click="Button_Click_1"/>
         <Label  Foreground="#FFB1B1B1" Content="e-mail"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="2" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
         <Label  Foreground="#FFB1B1B1" Content="Gender"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="1" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Grid.Column="3" />
         <Label Foreground="#FFB1B1B1" Content="NIC No"  Background="#FF323232" Grid.ColumnSpan="3" Margin="51,0.4,226,9.6" Grid.Row="3" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />

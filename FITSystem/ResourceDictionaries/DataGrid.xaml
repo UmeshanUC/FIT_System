@@ -126,17 +126,18 @@
     <!-- DataGridRow -->
 
     <Style x:Key="{x:Type DataGridRow}" TargetType="{x:Type DataGridRow}">
-        <Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+        <Setter Property="Background" Value="{DynamicResource Brush_DataGridSelected}" />
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ActiveBorderBrush}}"  />
         <Setter Property="SnapsToDevicePixels" Value="true"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type DataGridRow}">
                     <Border 
-          x:Name="DGR_Border"
-          Background="{TemplateBinding Background}"
-          BorderBrush="{TemplateBinding BorderBrush}"
-          BorderThickness="{TemplateBinding BorderThickness}"
-          SnapsToDevicePixels="True">
+                          x:Name="DGR_Border"
+                          Background="{TemplateBinding Background}"
+                          BorderBrush="{TemplateBinding BorderBrush}"
+                          BorderThickness="{TemplateBinding BorderThickness}"
+                          SnapsToDevicePixels="True">
                         <SelectiveScrollingGrid x:Name="selectiveScrollingGrid">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="Auto"/>
@@ -147,13 +148,13 @@
                                 <RowDefinition Height="Auto" />
                             </Grid.RowDefinitions>
                             <DataGridCellsPresenter x:Name="dataGridCellsPresenter" 
-              Grid.Column="1"
-               ItemsPanel="{TemplateBinding ItemsPanel}"
-               SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                            <DataGridRowHeader x:Name="dataGridRowHeader" 
-              SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"  
-              Grid.RowSpan="2"
-              Visibility="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.Row}}"/>
+                          Grid.Column="1"
+                           ItemsPanel="{TemplateBinding ItemsPanel}"
+                           SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        <DataGridRowHeader x:Name="dataGridRowHeader" 
+                          SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"  
+                          Grid.RowSpan="2"
+                          Visibility="{Binding RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}, Path=HeadersVisibility, Converter={x:Static DataGrid.HeadersVisibilityConverter}, ConverterParameter={x:Static DataGridHeadersVisibility.Row}}"/>
                             <Grid Grid.Column="1" Grid.Row="1" Name="Details" Visibility="Collapsed" Background="Gray">
                                 <DataGridDetailsPresenter x:Name="dataGridDetailsPresenter" />
                             </Grid>
@@ -161,9 +162,9 @@
                     </Border>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" TargetName="DGR_Border" Value="{DynamicResource BlueWindow}"/>
                             <Setter Property="Foreground" TargetName="dataGridCellsPresenter" Value="White"/>
                             <Setter Property="Foreground" TargetName="dataGridRowHeader" Value="White"/>
+                            <Setter Property="Background" TargetName="DGR_Border" Value="{DynamicResource BlueWindow}"/>
                             <Setter Property="FontSize" TargetName="dataGridRowHeader" Value="13.333"/>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">

@@ -17,12 +17,12 @@ namespace FITSystem.Models
         public string Username{ get; set; } 
         [Required]
         public string Passwd { get; set; }
-        [Required][ForeignKey("WorkRole")]
+        [Required][ForeignKey("Permissions")]
         public int PermissionLevel { get; set; }
 
         #region NavigationProps
         public virtual Person Person{ get; set; }
-        public virtual WorkRole WorkRole{ get; set; }
+        public virtual Permissions Permissions{ get; set; }
         #endregion
     }
 }

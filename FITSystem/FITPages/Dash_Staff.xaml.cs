@@ -1,4 +1,5 @@
 ﻿using FITSystem.Classes;
+using FITSystem.Database;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,34 +25,38 @@ namespace FITSystem.FITPages
         public Dash_Staff()
         {
             InitializeComponent();
-            cardMed.DataContext = new DetailCard()
+            cardMed.DataContext = CreateDetailCardCtx("Medical Officers");
+            cardMembers.DataContext = CreateDetailCardCtx("Members");
+            cardTrainers.DataContext = CreateDetailCardCtx("Trainers");
+            cardOther.DataContext = CreateDetailCardCtx("Other Staff");
+        }
+
+        private DetailCardCtx CreateDetailCardCtx(string personType)
+        {
+            int WorkRoleID = Global.PersonTypeToWorkRoleID(personType);
+
+            if (WorkRoleID == -1)
             {
-                CardName = "Medical Officers",
-                TotalEmployed = 10,
-                TodayOnWork = 5,
-                TotalOther = 3
-            };
-            cardMembers.DataContext = new DetailCard()
+                MessageBox.Show("Error in PersonType.");
+                return null;
+            }
+
+            DetailCardCtx detailCardCtx;
+            using (FitDb db = new FitDb())
             {
-                CardName = "Members",
-                TotalEmployed = 100,
-                TodayOnWork = 50,
-                TotalOther = 3
-            };
-            cardTrainers.DataContext = new DetailCard()
-            {
-                CardName = "Trainers",
-                TotalEmployed = 35,
-                TodayOnWork = 20,
-                TotalOther = 2
-            };
-            cardOther.DataContext = new DetailCard()
-            {
-                CardName = "Other Staff",
-                TotalEmployed = 20,
-                TodayOnWork = 16,
-                TotalOther = 1
-            };
+                var thisTypePersonList = db.PersonSet.Where(p => p.WorkRoleID == WorkRoleID);
+                detailCardCtx = new DetailCardCtx()
+                {
+                    CardName = personType,
+                    TotalEmployed = thisTypePersonList.Count(),
+                    TodayOnWork = thisTypePersonList.Count(p=>p.TodayPresence),
+                    Males = thisTypePersonList.Count(p=>p.Gender == "Male"),
+                    Femails = thisTypePersonList.Count(p=>p.Gender == "Female"),
+                    ManageType = personType,
+
+                };
+            }
+            return detailCardCtx;
         }
     }
 }

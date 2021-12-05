@@ -10,10 +10,14 @@ namespace FITSystem.Models
 {
     public class Person
     {
+        public Person()
+        {
+            JoinedDate = DateTime.Today;
+        }
         [Key]
         public string NIC { get; set; }
         public string Name { get; set; }
-        [ForeignKey("WorkRole")]
+        [ForeignKey("Permissions")]
         public int WorkRoleID { get; set; }
         public string Email { get; set; }
         public string Gender { get; set; }
@@ -21,10 +25,11 @@ namespace FITSystem.Models
         public DateTime JoinedDate { get; set; }
         public int Telephone { get; set; }
         public string Pic { get; set; } //datatype ?
+        public bool TodayPresence { get; set; }
 
 
         #region NavigationProps
-        public virtual WorkRole WorkRole { get; set; }
+        public virtual Permissions Permissions{ get; set; }
         public virtual Login Login { get; set; }
         public virtual Member Member{ get; set; }
         public virtual Employee Employee{ get; set; }

@@ -8,10 +8,10 @@ namespace FITSystem.Classes
 {
     public class StaffAndMembersContext
     {
-        public DetailCard MedicalOfficersCard { get; set; }
-        public DetailCard TrainersCard { get; set; }
-        public DetailCard MembersCard { get; set; }
-        public DetailCard OtherStaffCard { get; set; }
+        public DetailCardCtx MedicalOfficersCard { get; set; }
+        public DetailCardCtx TrainersCard { get; set; }
+        public DetailCardCtx MembersCard { get; set; }
+        public DetailCardCtx OtherStaffCard { get; set; }
 
     }
 }

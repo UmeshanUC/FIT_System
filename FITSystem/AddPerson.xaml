@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         
         Style="{StaticResource DefWindow}" 
-        Title="AddPerson" Height="625" Width="990">
+        Title="AddPerson" Height="835" Width="1445">
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0"/>
     </WindowChrome.WindowChrome>
@@ -36,6 +36,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="1*"/>
                         <RowDefinition Height="1*"/>
+                        <RowDefinition Height="70"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="1.5*"/>
@@ -60,15 +61,14 @@
                                 </Grid.ColumnDefinitions>
 
                                 <StackPanel Grid.Column="0">
-                                    <TextBlock Text="Id" Style="{StaticResource H2_stackVertical}"/>
+                                    <TextBlock Text="NIC" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text="Name" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text="Role" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text="Email" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text="Gender" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text="Address" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Bank Account" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text="Joined Date" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text="Telephone" Style="{StaticResource H2_stackVertical}"/>
+                                    <TextBlock Text="Joined Date" Style="{StaticResource H2_stackVertical}"/>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="1" Margin="10 0 0 0">
@@ -80,25 +80,25 @@
                                     <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
                                     <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
-                                    <TextBlock Text=":" Style="{StaticResource H2_stackVertical}"/>
                                 </StackPanel>
 
                                 <StackPanel Grid.Column="2" Margin="10 0">
-                                    <TextBox Text="{Binding Id}" Style="{StaticResource InputH2_stackVertical}"/>
+                                    <TextBox Text="{Binding NIC}" Style="{StaticResource InputH2_stackVertical}"/>
                                     <TextBox Text="{Binding Name}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding Role}" Style="{StaticResource InputH2_stackVertical}"/>
+                                    <ComboBox Text="{Binding Role}" Style="{StaticResource Combo_stackVertical}"/>
                                     <TextBox Text="{Binding Email}" Style="{StaticResource InputH2_stackVertical}"/>
                                     <TextBox Text="{Binding Gender}" Style="{StaticResource InputH2_stackVertical}"/>
                                     <TextBox Text="{Binding Address}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding BankAccount}" Style="{StaticResource InputH2_stackVertical}"/>
-                                    <TextBox Text="{Binding JoinedDate}" Style="{StaticResource InputH2_stackVertical}"/>
                                     <TextBox Text="{Binding Telephone}" Style="{DynamicResource InputH2_stackVertical}"/>
+                                    <DatePicker SelectedDate="{Binding JoinedDate}" Style="{StaticResource DTPick_stackVertical}"/>
                                 </StackPanel>
 
-                                <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Margin="5" Orientation="Horizontal" FlowDirection="RightToLeft">
+                                <StackPanel Grid.Row="2" Grid.ColumnSpan="3"  Margin="5" Orientation="Horizontal" FlowDirection="RightToLeft">
                                     <Button Content="Call" Padding="15 0" Margin="10 0 0 0" Height="auto"/>
-                                    <Button Content="Email" Padding="15 0" Margin="10 0 0 0" Height="auto"/>
+                                    <Button Content="Email" Padding="15 0" Margin="10 0 0 0" Height="30" VerticalAlignment="Top" Click="Button_Click"/>
                                 </StackPanel>
+
+
                             </Grid>
 
 
@@ -137,6 +137,15 @@
                             <TextBlock Text="Schedule" DockPanel.Dock="Top" Style="{StaticResource H1}"/>
                         </DockPanel>
                     </Border>
+
+                    <!--Main-Buttons-->
+                    <Border Grid.Row="2" Grid.ColumnSpan="3" Style="{StaticResource RoundFrame}">
+                        <StackPanel Orientation="Horizontal" FlowDirection="RightToLeft">
+                            <Button Content="OK" Width="100" Margin="20 0 0 0" Click="Button_Click_1"/>
+                            <Button Content="Cancel" Width="100" Margin="20 0 0 0"/>
+                        </StackPanel>
+                    </Border>
+
                 </Grid>
             </DockPanel>
         </DockPanel>

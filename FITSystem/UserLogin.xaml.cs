@@ -31,18 +31,20 @@ namespace FITSystem
         #region Methods
         public void LogUserLogin()
         {
-            FitDb loginLogCtx = new FitDb();
-            LoginLog log = new LoginLog()
+            using (FitDb loginLogCtx = new FitDb())
             {
-                EmplId = txtUser.Text,
-                LoggedTs = DateTime.Now,
-            };
-            Global.EmplId = txtUser.Text;
-            Global.LoginTs = log.LoggedTs;
-            Global.IsUserLoggedIn = true;
+                LoginLog log = new LoginLog()
+                {
+                    NIC = txtUser.Text,
+                    LoggedTs = DateTime.Now,
+                };
+                Global.LoggedUserNIC = txtUser.Text;
+                Global.LoggedTs = log.LoggedTs;
+                Global.IsUserLoggedIn = true;
 
-            loginLogCtx.LoginLogSet.Add(log);
-            loginLogCtx.SaveChanges();
+                loginLogCtx.LoginLogSet.Add(log);
+                loginLogCtx.SaveChanges();
+            }
         }
 
         public void Navigate<TWin>() where TWin : Window, new()
@@ -57,8 +59,8 @@ namespace FITSystem
             //Instantiating the DbConctext
             using (FitDb loginQuery = new FitDb())
             {
-                var Tdata = await loginQuery.PersonSet.Include(e => e.Login)
-                    .SingleOrDefaultAsync(e => e.Login.Username == user && e.Login.Passwd == passWd);
+                var Tdata = await loginQuery.LoginSet.SingleOrDefaultAsync
+                    (e => e.Username == user && e.Passwd == passWd);
 
 
                 if (Tdata == null)
@@ -68,7 +70,7 @@ namespace FITSystem
                     return (false, -1);
                 }
 
-                return (true, Tdata.WorkRole.RoleId);
+                return (true, Tdata.PermissionLevel);
             }
         }
         #endregion

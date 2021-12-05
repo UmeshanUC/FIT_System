@@ -8,12 +8,11 @@ using System.Threading.Tasks;
 
 namespace FITSystem.Models
 {
-    public class LoginLog
+    public class Permissions
     {
-        [Key, Column(Order = 0)]
-        public string NIC { get; set; }
-        [Key, Column(Order = 1)]
-        public DateTime LoggedTs { get; set; }
-        public DateTime? LogOutTs { get; set; }
+        [Key][DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int PermID { get; set; }
+        public string PermName { get; set; }
+        public string Description { get; set; }
     }
 }

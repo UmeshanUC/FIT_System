@@ -13,6 +13,7 @@ namespace FITSystem.Database
         public DbSet<Login> LoginSet { get; set; }
         public DbSet<LoginLog> LoginLogSet { get; set; }
         public DbSet<WorkRole> WorkRoleSet { get; set; }
+        public DbSet<Permissions> PermissionSet { get; set; }
         public DbSet<Branches> BranchSet { get; set; }
         public DbSet<Employee> EmployeeSet { get; set; }
         public DbSet<Person> PersonSet { get; set; }

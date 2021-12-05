@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FITSystem.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,6 +25,20 @@ namespace FITSystem.FITControls
         {
             InitializeComponent();
 
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            string personType = (DataContext as DetailCardCtx)?.ManageType;
+            if (personType == null)
+            {
+                MessageBox.Show("Error in Setting Managing PersonType.");
+                return;
+            }
+            Global.setManagingPersonType(personType);
+            ManageStaffAndMembers manageStaffAndMembers = new ManageStaffAndMembers();
+            manageStaffAndMembers.ShowDialog();
+            //Window.GetWindow(this)?.Close();
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FITSystem.Classes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,9 +20,34 @@ namespace FITSystem
     /// </summary>
     public partial class Email : Window
     {
+        private readonly string recipient;
+
         public Email()
         {
             InitializeComponent();
+        }
+
+        public Email(string recipient)
+        {
+            InitializeComponent();
+            this.recipient = recipient;
+            EmailCtx emailCtx = new EmailCtx()
+            {
+                Recipient = recipient
+            };
+            DataContext = emailCtx;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            EmailCtx emailCtx = DataContext as EmailCtx;
+            EmailService emailService = new EmailService(emailCtx.Body, emailCtx.Recipient, emailCtx.Subject);
+            emailService.Send();
+        }
+
+        private void FitTitleBar_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

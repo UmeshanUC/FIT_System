@@ -4,7 +4,7 @@
              xmlns:local="clr-namespace:FITSystem"
              xmlns:fa="http://schemas.fontawesome.io/icons/"
              xmlns:sys="clr-namespace:System;assembly=mscorlib"
-             StartupUri="UserLogin.xaml">
+             StartupUri="AddPerson.xaml" ShutdownMode="OnLastWindowClose">
 
     <Application.Resources>
         <ResourceDictionary>
@@ -90,9 +90,10 @@
 
             <!--Heading 2 Vertically Stacking TextBlock Style-->
             <Style x:Key="H2_stackVertical" TargetType="TextBlock">
-                <Setter Property="Margin" Value="0 0 0 20"/>
+                <Setter Property="Margin" Value="0 1 0 20"/>
                 <Setter Property="Foreground" Value="#FFB1B1B1"/>
                 <Setter Property="FontSize" Value="12"/>
+                <Setter Property="Padding" Value="5"/>
                 <Setter Property="FontWeight" Value="Bold"/>
                 <Setter Property="FontFamily" Value="Arial"/>
             </Style>
@@ -109,6 +110,30 @@
                 <Setter Property="FontFamily" Value="Arial"/>
             </Style>
 
+            <!--Heading 2 Vertically Stacking TextBox Style-->
+            <Style x:Key="Combo_stackVertical" TargetType="ComboBox">
+                <Setter Property="Margin" Value="0 0 0 20"/>
+                <Setter Property="Padding" Value="5"/>
+                <Setter Property="Foreground" Value="#FFD3C7C7"/>
+                <Setter Property="Background" Value="#3FB1B1B1"/>
+                <Setter Property="BorderBrush" Value="#FF636363"/>
+                <Setter Property="FontSize" Value="12"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+            </Style>
+
+            <!--Heading 2 Vertically Stacking DTPick Style-->
+            <Style x:Key="DTPick_stackVertical" TargetType="DatePicker">
+                <Setter Property="Margin" Value="0 0 0 20"/>
+                <Setter Property="Padding" Value="10"/>
+                <Setter Property="Foreground" Value="#FFD3C7C7"/>
+                <Setter Property="Background" Value="#3FB1B1B1"/>
+                <Setter Property="BorderBrush" Value="#FF636363"/>
+                <Setter Property="FontSize" Value="20"/>
+                <Setter Property="FontWeight" Value="Bold"/>
+                <Setter Property="FontFamily" Value="Arial"/>
+            </Style>
+
             <!--Common TextBlocks-->
             <Style x:Key="TBlockCommon" TargetType="TextBlock">
                 <Setter Property="Foreground" Value="#FFB1B1B1"/>
@@ -118,6 +143,7 @@
             </Style>
             
             <!--Theming-->
+            <!--Border-RoundFrame -->
             <Style x:Key="RoundFrame" TargetType="Border">
                 <Setter Property="CornerRadius" Value="4"/>
                 <Setter Property="Margin" Value="5"/>

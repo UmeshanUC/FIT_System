@@ -27,7 +27,7 @@ namespace FITSystem.FITControls
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            App.Current.Shutdown();
+            Window.GetWindow(this).Close();
         }
 
     }

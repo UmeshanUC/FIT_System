@@ -19,7 +19,7 @@
 
             <!--TitleBar-->
             <StackPanel Orientation="Vertical" Margin="0" DockPanel.Dock="Top">
-                <Controls:FitTitleBar DockPanel.Dock="Top">
+                <Controls:FitTitleBar DockPanel.Dock="Top" MouseDown="FitTitleBar_MouseDown">
                     <Controls:FitTitleBar.Background>
                         <RadialGradientBrush>
                             <GradientStop Color="Black" Offset="0"/>
@@ -74,16 +74,16 @@
                                     <RowDefinition Height="1*"/>
                                     <RowDefinition Height="3*"/>
                                 </Grid.RowDefinitions>
-                                <TextBox Text="{Binding Gender}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="0" Margin="10 0" 
+                                <TextBox Text="{Binding Subject}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="0" Margin="10 0" 
                                          VerticalAlignment="Center"/>
-                                <TextBox Text="{Binding Gender}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="1" Margin="10 0" 
+                                <TextBox Text="{Binding Recipient}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="1" Margin="10 0" 
                                          VerticalAlignment="Center"/>
-                                <TextBox Text="{Binding Gender}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="2" Margin="10"/>
+                                <TextBox Text="{Binding Body}" Style="{StaticResource InputH2_stackVertical}" Grid.Row="2" Margin="10"/>
                             </Grid>
 
-                            <StackPanel Grid.Row="1" Grid.ColumnSpan="3" Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
-                                <Button Content="Email" Padding="15 0" Margin="10 0 0 0" Height="auto"/>
-                                <Button Content="Cancel" Padding="15 0" Margin="10 0 0 0" Height="auto"/>
+                            <StackPanel Grid.Row="1" Grid.Column="2" Grid.ColumnSpan="1" Margin="5" Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Content="Send" Padding="15 0" Margin="5 0" Height="auto" Click="Button_Click"/>
+                                <Button Content="Cancel" Padding="15 0" Margin="5 0" Height="auto"/>
                             </StackPanel>
                         </Grid>
 

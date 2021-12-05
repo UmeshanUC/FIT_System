@@ -51,7 +51,7 @@
             </Grid>
 
             <DockPanel Grid.Row="2" LastChildFill="False">
-                <Button DockPanel.Dock="Right" Content="Manage" Padding="10 0"/>
+                <Button DockPanel.Dock="Right" Content="Manage" Padding="10 0" Click="Button_Click"/>
             </DockPanel>
             
         </Grid>

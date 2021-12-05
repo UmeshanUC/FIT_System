@@ -27,7 +27,12 @@ namespace FITSystem.FITControls
 
         private void miLogout_Click(object sender, RoutedEventArgs e)
         {
+            Global.UserLogout();
+        }
 
+        private void miExit_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
         }
     }
 }

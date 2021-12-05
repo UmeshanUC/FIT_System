@@ -17,14 +17,11 @@
     </UserControl.Resources>
     <StackPanel Background="Transparent" Orientation="Horizontal">
         <Menu VerticalAlignment="Center" Background="Transparent">
-            <MenuItem Header="File">
-                <MenuItem x:Name="miLogout" Style="{StaticResource DarkItem}" Header="Logout"/>
-                <MenuItem x:Name="miExit" Style="{StaticResource DarkItem}"  Header="Exit"/>
+            <MenuItem Header="File" Foreground="White">
+                <MenuItem x:Name="miLogout" Style="{StaticResource DarkItem}" Header="Logout" Click="miLogout_Click"/>
+                <MenuItem x:Name="miExit" Style="{StaticResource DarkItem}"  Header="Exit" Click="miExit_Click"/>
             </MenuItem>
             <MenuItem Header="Option" Foreground="White" AllowDrop="True">
-
-                <MenuItem x:Name="miConfiguration" Style="{StaticResource DarkItem}" Header="Configuration" IsEnabled="True"/>
-                <MenuItem x:Name="miDevOption" Style="{StaticResource DarkItem}" Header="Developer Option"/>
                 <MenuItem x:Name="miLog" Style="{StaticResource DarkItem}" Header="Log"/>
 
             </MenuItem>

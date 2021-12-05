@@ -12,14 +12,12 @@ namespace FITSystem.Models
 {
     public class WorkRole
     {
-        [Key] [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        [Key][DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int RoleId { get; set; } //  Permission ID - Taken to Permission Granting
         [Required]
         public string  RoleName { get; set; }
         public string Description { get; set; }
 
-        #region NavigationProps
-        #endregion
 
     }
 }

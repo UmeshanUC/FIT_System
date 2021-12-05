@@ -9,7 +9,7 @@
         xmlns:Pages="clr-namespace:FITSystem.FITPages"
         mc:Ignorable="d"
         Title="FIT-SYSTEM" MouseDown="Window_MouseDown" WindowStyle="None" AllowsTransparency="True" 
-        Height="864" Width="1536" WindowState="Maximized" WindowStartupLocation="CenterScreen"
+        WindowState="Maximized" WindowStartupLocation="CenterScreen" d:DesignWidth="1420" d:DesignHeight="880"
         >
     <WindowChrome.WindowChrome>
         <WindowChrome CaptionHeight="0"/>

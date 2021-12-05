@@ -203,6 +203,9 @@
     <Compile Include="Register_Edit.xaml.cs">
       <DependentUpon>Register_Edit.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Trainer_window.xaml.cs">
+      <DependentUpon>Trainer_window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserLogin.xaml.cs">
       <DependentUpon>UserLogin.xaml</DependentUpon>
     </Compile>
@@ -284,6 +287,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ResourceDictionaries\DataGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Trainer_window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

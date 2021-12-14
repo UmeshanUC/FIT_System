@@ -13,7 +13,7 @@ namespace FITSystem.Database
         public DbSet<Login> LoginSet { get; set; }
         public DbSet<LoginLog> LoginLogSet { get; set; }
         public DbSet<WorkRole> WorkRoleSet { get; set; }
-        public DbSet<Branches> BranchSet { get; set; }
+        //public DbSet<Branches> BranchSet { get; set; }
         public DbSet<Employee> EmployeeSet { get; set; }
         public DbSet<Person> PersonSet { get; set; }
         public DbSet<Inventory> ItemSet { get; set; }
@@ -24,6 +24,8 @@ namespace FITSystem.Database
         public DbSet<Supplier> SupplierSet { get; set; }
         public DbSet<Training_Plan> TrainingProfileSet { get; set; }
         public DbSet<Transactions> TransactionSet { get; set; }
+
+        public DbSet<Reg_members> Reg_Members { get; set; }
     }
     
 

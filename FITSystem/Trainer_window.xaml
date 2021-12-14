@@ -9,8 +9,8 @@
         WindowStyle="None"
         Title="Trainer_window" Height="784" Width="1286">
     <Grid Background="#282930">
-        <Grid Margin="0,100,978,446.6">
-            <Label Content="Client's Information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="302" Height="36" FontSize="14" Foreground="#FFB1B1B1" >
+        <Grid Margin="0,100,999,415.6">
+            <Label Content="Client's Information" HorizontalAlignment="Left" VerticalAlignment="Top" Width="281" Height="36" FontSize="14" Foreground="#FFB1B1B1" >
                 <Label.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF383838" Offset="0"/>
@@ -24,21 +24,374 @@
                     </LinearGradientBrush>
                 </Label.OpacityMask>
             </Label>
-            <Label Content="Age" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Background="#FF635C5C" Width="78" FontWeight="Bold" />
-            <Label Content="Gender" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Background="#FF635C5C" Width="78" />
-            <Label Content="Height" HorizontalAlignment="Left" Margin="0,103,0,0" VerticalAlignment="Top" Background="#FF635C5C" Width="78" />
-            <Label Content="Weight" HorizontalAlignment="Left" Margin="0,134,0,0" VerticalAlignment="Top" Background="#FF635C5C" Width="78" />
-            <Label Content="BMI" HorizontalAlignment="Left" Margin="0,165,0,0" VerticalAlignment="Top" Background="#FF635C5C" Width="78" />
-            <Label Content="Target BMI" HorizontalAlignment="Left" Margin="0,196,0,0" VerticalAlignment="Top" Background="#FF635C5C" Width="78" />
-            <TextBlock HorizontalAlignment="Left" Margin="162,36,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <Label Content="User name" HorizontalAlignment="Left" Margin="0,41,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71"  Foreground="#FFB1B1B1" />
+            <Label Content="Name" HorizontalAlignment="Left" Margin="0,72,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+            <Label Content="Height" HorizontalAlignment="Left" Margin="0,103,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+            <Label Content="Weight" HorizontalAlignment="Left" Margin="0,134,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+            <Label Content="Age" HorizontalAlignment="Left" Margin="0,165,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
+            <Label Content="TP Num" HorizontalAlignment="Left" Margin="0,196,0,0" VerticalAlignment="Top" Background="#FF626262" Width="71" Foreground="#FFB1B1B1" />
 
 
         </Grid>
 
 
         <FITControls:FitTitleBar HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="1280"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="625,615,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Get" HorizontalAlignment="Left" Margin="206,332,0,0" VerticalAlignment="Top" Width="75"/>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="85,144,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="85,174,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="85,207,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="85,237,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="85,268,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <TextBlock HorizontalAlignment="Left" Height="20" Margin="85,299,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="196" Foreground="#FFB1B1B1">
+            <TextBlock.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF383838" Offset="0"/>
+                    <GradientStop Color="#FF626262" Offset="1"/>
+                </LinearGradientBrush>
+            </TextBlock.Background>
+        </TextBlock>
+        <Grid Margin="0,416,999,64.6">
+            <Label Content="Suggestions" HorizontalAlignment="Left" VerticalAlignment="Top" Width="281" Height="36" FontSize="14" Foreground="#FFB1B1B1" >
+                <Label.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.Background>
+                <Label.OpacityMask>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </Label.OpacityMask>
+            </Label>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,41,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,91,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,141,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,241,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,266,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="281" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
 
+        </Grid>
+
+        <Grid Margin="281,100,0,643.6">
+            <Button Margin="889,2,0,2" Content="Create plan" ></Button>
+        </Grid>
+        <Grid Margin="286,134,0,445.6">
+            <Label Content="Warm-Up" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Background="#FF626262" Foreground="#FFB1B1B1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+        </Grid>
+        <Grid Margin="286,332,0,247.6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Label Content="Strength" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Background="#FF626262" Foreground="#FFB1B1B1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+
+
+        </Grid>
+        <Grid Margin="286,530,0,49.6">
+            <Label Content="Cool-Down" HorizontalAlignment="Left" VerticalAlignment="Top" Width="148" Background="#FF626262" Foreground="#FFB1B1B1"/>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,26,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,46,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,66,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,106,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,126,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,146,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+            <TextBlock HorizontalAlignment="Left" Height="20" Margin="0,166,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="999" Foreground="#FFB1B1B1">
+                <TextBlock.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF383838" Offset="0"/>
+                        <GradientStop Color="#FF626262" Offset="1"/>
+                    </LinearGradientBrush>
+                </TextBlock.Background>
+            </TextBlock>
+        </Grid>
 
 
     </Grid>

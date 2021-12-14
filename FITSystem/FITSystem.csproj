@@ -103,6 +103,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Management" />
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
@@ -116,6 +117,7 @@
     </Reference>
     <Reference Include="System.Security" />
     <Reference Include="System.Transactions" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -143,9 +145,18 @@
     <Compile Include="Classes\Models\Interfaces\IPerson.cs" />
     <Compile Include="Classes\Models\Profile.cs" />
     <Compile Include="Classes\Models\StaffAndMembersContext.cs" />
+    <Compile Include="Contact_foarm.xaml.cs">
+      <DependentUpon>Contact_foarm.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Database\database.cs" />
     <Compile Include="Email.xaml.cs">
       <DependentUpon>Email.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FAQAnswer_window.xaml.cs">
+      <DependentUpon>FAQAnswer_window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ_window.xaml.cs">
+      <DependentUpon>FAQ_window.xaml</DependentUpon>
     </Compile>
     <Compile Include="FITControls\DetailCard.xaml.cs">
       <DependentUpon>DetailCard.xaml</DependentUpon>
@@ -176,6 +187,9 @@
     <Compile Include="ManageStaffAndMembers.xaml.cs">
       <DependentUpon>ManageStaffAndMembers.xaml</DependentUpon>
     </Compile>
+    <Compile Include="memberdashboard.xaml.cs">
+      <DependentUpon>memberdashboard.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Member_payment.xaml.cs">
       <DependentUpon>Member_payment.xaml</DependentUpon>
     </Compile>
@@ -191,6 +205,7 @@
     <Compile Include="Models\MEMBER.cs" />
     <Compile Include="Models\PACKAGE.cs" />
     <Compile Include="Models\PERSON.cs" />
+    <Compile Include="Models\Reg_members.cs" />
     <Compile Include="Models\SELLING_PRODUCT.cs" />
     <Compile Include="Models\SECTION.cs" />
     <Compile Include="Models\SUPPLIER.cs" />
@@ -218,6 +233,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Contact_foarm.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="DashB.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -231,6 +250,14 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Email.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FAQAnswer_window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="FAQ_window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -267,6 +294,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ManageStaffAndMembers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="memberdashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

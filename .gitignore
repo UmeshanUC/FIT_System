@@ -389,3 +389,11 @@ FodyWeavers.xsd
 # JetBrains Rider
 .idea/
 *.sln.iml
+/FITSystem/Models/PERMISSIONS.cs
+/FITSystem/sql/dbo.Logins.data.sql
+*.sql
+/FITSystem/Classes/EmailService.cs
+/FITSystem/Classes/ErrorService.cs
+/FITSystem/Classes/EmailCtx.cs
+/FITSystem/Classes/Models/DetailCardCtx.cs
+/db
